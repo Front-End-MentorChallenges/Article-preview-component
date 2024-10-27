@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue:  hsl(214, 17%, 51%);
+    --light-grayish-blue:     hsl(210, 46%, 95%);
+    --grayish-blue:           hsl(212, 23%, 69%);
+    --white:                  hsl(0, 0%, 100%);
+}
+
+/* Body */
+body{
+    background-color: var(--light-grayish-blue);
+    font-family: Manrope;
+    font-weight: 500;
+}
+
+
+/* Card */
+.card_container{
+    margin: auto;
+    position: relative;
+    top: 150px;
+    background: var(--white);
+    max-width: 720px;
+    height: 15em;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px lightgray;
+    box-sizing: content-box;
+    transition: 0.2s;
+    display: grid;
+    overflow: hidden;
+}
+
+.card_container:hover{
+    box-shadow: 0px 0px 20px 5px lightgray;
+    transition: 0.2s;
+}
+
+.card_container img{
+    height: 100%;
+    max-width: 20em;
+    object-fit: cover;
+    overflow: clip;
+    -webkit-user-drag: none;
+
+}
+
+
+.card_container .card{
+}
+
+.card_container .card .card_header{
+    padding: 30px;
+
+}
+.card_container .card .card_header h3,p{
+    padding: 5px;
+    font-size: 13px;
+}
+.card_container .card .card_header p{
+    color: var(--very-dark-grayish-blue);
+}
+
+.card_container .card .card_header h3,p:hover{
+    
+}
+
+/* Author 
+   - Everything to do with the author 
+*/
+
+.card_container .card_footer{
+    display: flex;
+    justify-content: center;
+}
+.card_container .card_footer .author{
+    display: flex;
+    width: 360px;
+    padding: 5px;
+    /* position: fixed; */
+}
+
+.card_container .card_footer .author img{
+    width: 40px;
+    border-radius: 100%;
+    -webkit-user-drag: none;
+    margin-right: 5px;
+}
+
+.card_container .card_footer .author .author_info{
+    position: relative;
+    top: 5px;
+}
+
+
+/* Share Button styling
+
+*/
+
+.card_container .card_footer .share_btn{
+    font-size: 20px;
+    background: var(--light-grayish-blue);
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    box-sizing: content-box;
+    color: var(--grayish-blue);
+    border-radius: 100%;
+    position: absolute;
+    margin: 0px 0px 0px 300px;
+}
+
+.card_container .card_footer .share_btn .share_btn_icon{
+    position: relative;
+    top: -2px;
+}
+
+.card_container .card_footer .share_btn:hover{
+    cursor: default;
+    background: var(--desaturated-dark-blue);
+    color: white;
+}
+
+.card_container .card_footer .hidden_card{
+    position: absolute;
+    background: var(--light-grayish-blue);
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    margin-left: 18em;
+    margin-top: -40px;
+    overflow-block:visible;
+    display: flex;
+}
+
+
+.card_container .card_footer .hidden_card .hidden_icon{
+    font-size: 18px;
+    color: var(--grayish-blue);
+    text-align: center;
+    justify-content: center;
+}
+
+.card_container .card_footer .hidden_card .hidden_icon:hover{
+    cursor: pointer;
+    color: var(--very-dark-grayish-blue);
+}
+
+
+.card_container .card_footer .hidden_card p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    color: var(--grayish-blue);
+    position: relative;
+    top: 3px;
+    right: 3px;
+}
+
+.card_container .card_footer .popup{
+    display: none;
+}
+
+/* Share Button styling End */
+
+
+
+
+
+/* Responsive Styling - card container */
+@media (min-width: 550px) {
+    .card_container {
+        display: flex;
+    }
+}
+
+@media (max-width: 760px) {
+    .card_container {
+        display: grid;
+        grid-template-columns: auto;
+        height: 600px;
+        width: 400px;
+        position: relative;
+        top: 50px;
+    }
+    .card_container img{
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+        overflow: clip;
+        -webkit-user-drag: none;
+    
+    }
+    .card_container .card_footer .hidden_card{
+        position: absolute;
+        background: var(--light-grayish-blue);
+        border-radius: 10px;
+        padding: 10px;
+        justify-content: center;
+        width: 400px;
+        height: 70px;
+        overflow-block:visible;
+        right: auto;
+        left: auto;
+        top: auto;
+        margin: auto;
+    }
+    .card_container .card_footer .hidden_card {
+        font-size: 20px;
+        padding: 20px;
+    }
+}

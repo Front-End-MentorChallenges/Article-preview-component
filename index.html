@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+   
+
+
+    <article class="card_container">
+      <img src="./images/drawers.jpg" alt="Drawers">
+      <div class="card">
+        <!-- Card header -->
+        <header class="card_header">
+            <h3>Shift the overall look and feel by adding these wonderful touches to furniture in your home
+            </h3>
+            <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+        </header>
+        <footer class="card_footer">
+          <!-- Author -->
+          <figure class="author">
+            <img src="./images/avatar-michelle.jpg" alt="Michelle">
+            <detials class="author_info">
+              <h6 class="author_info_name">Michelle Appleton</h6>
+              <h6 class="author_info_date">28 Jun 2020</h6>
+            </detials>
+          </figure>
+
+          <!-- Share Button -->
+           <a href="#" class="share_btn">
+            <ion-icon class="share_btn_icon" name="arrow-redo"></ion-icon>
+          </a>
+
+          <!-- Hidden card -->
+          <div class="hidden_card popup">
+            <p>SHARE</p>
+            <ion-icon class="hidden_icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="hidden_icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="hidden_icon" name="logo-pinterest"></ion-icon>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
